@@ -8,15 +8,17 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Libre+Baskerville&display=swap" rel="stylesheet">
+   
 </head>
 
 <body class="bg-gray-200">
 
     <!-- Navbar -->
     <header>
-        <nav class="top-0 fixed w-full z-20">
+        <nav class="navbar-first top-0 fixed w-full z-20">
             <div class="p-6 px-8 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
+                <div class="flex items-center justify-evenly h-16">
 
                     <!-- Left Menu -->
                     <ul class="flex space-x-16 text-blue-800 font-semibold">
@@ -60,7 +62,8 @@
             </div>
         </nav>
 
-        <nav class="bg-white px-6 py-6 flex items-center w-full top-0 fixed z-20">
+        <!-- Navbar kedua -->
+        <nav class="navbar-second bg-white px-6 py-6 flex items-center w-full top-0 fixed z-20">
             <!-- Menu Tengah (Tersebar) -->
             <div class="flex flex-1 justify-evenly">
                 <a href="#" class="text-blue-700 font-medium">PRODUK</a>
@@ -75,18 +78,35 @@
             <a href="#" class="ml-6 px-4 py-2 bg-blue-700 text-white rounded-full border-2 border-yellow-400 text-sm font-bold">
                 SHOP NOW
             </a>
+
+            <!-- Tombol buka-tutup menu (mobile) -->
+            <button id="toggle-menu" class="md:hidden text-gray-800 focus:outline-none ml-4">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </nav>
+
+        <!-- Menu Dropdown (mobile) -->
+        <div id="dropdown-menu" class="hidden bg-white h-full w-full absolute left-0 z-30 shadow-lg">
+            <a href="#produk" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">PRODUK</a>
+            <a href="#momen-spesial" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">MOMEN SPESIAL</a>
+            <a href="#resep" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">RESEP</a>
+            <a href="#artikel" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">ARTIKEL</a>
+            <a href="#kreasi" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">KREASI WINCheez</a>
+            <a href="#tentang-kami" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">TENTANG KAMI</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <main class="w-full h-auto relative">
+    <main class="w-full">
         <!-- Text Overlay -->
-        <!-- <div class="absolute inset-0 flex items-center justify-center flex">
-            <h1 class="text-white text-4xl md:text-6xl font-bold">Kebaikan Susu Sapi Asli</h1><br />
-            <h1 class="text-white text-4xl md:text-6xl font-bold">New Zealand</h1>
-        </div> -->
+        <div class="absolute top-48 left-9 text-right flex flex-col items-center">
+            <h1 class="text-white text-6xl md:text-6xl font-pacifico drop-shadow-lg -rotate-6 -mt-4" style="font-family: 'Dancing Script', cursive">Kebaikan Susu Sapi Asli</h1><br />
+            <h1 class="text-white text-6xl md:text-8xl font-bold font-pacifico drop-shadow-lg -rotate-6" style="font-family: 'Libre Baskerville', serif">New Zealand</h1>
+        </div>
         <!-- Background Image -->
-        <img src="assets/images/header.jpeg" alt="Header" class="w-full h-full object-cover">
+        <img src="assets/images/bg.jpg" alt="Header" class="w-full h-full object-cover">
     </main>
 
     <section class="w-full -mt-10 relative z-10">
@@ -231,46 +251,54 @@
         </div>
     </section>
 
-    <section class="mt-10 p-4">
+    <section class="mt-10 p-4 relative">
+        <!-- Embed YouTube -->
+        <div class="absolute w-[510px] h-[280px] top-[190px] left-20 inset-y-0 flex items-center justify-center cursor-pointer" id="videoTrigger">
+            <span class="w-full h-full rounded-2xl cursor-pointer bg-white bg-opacity-5"></span>
+        </div>
+
+        <!-- Gambar -->
         <img src="assets/images/banner.png" alt="Banner" class="w-full h-full object-cover">
+
+        <!-- Modal Popup -->
+        <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="relative w-[800px] h-[450px]">
+                <iframe class="w-full h-full rounded-xl" id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+                <button id="closeModal" class="absolute top-2 right-2 text-white text-2xl font-bold">X</button>
+            </div>
+        </div>
     </section>
 
-    <section class="w-full p-8">
-        <div class="flex justify-between space-x-4">
-            <!-- Card 1 -->
-            <div class="w-1/4 h-full bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+    <section class="w-full p-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Card Template -->
+            <div class="bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div class="relative w-full h-32 flex items-center justify-center rounded-xl">
-                    <img src="assets/images/header.jpeg" alt="Card 1 Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                    <img src="assets/images/header.jpeg" alt="Card Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
                     <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center rounded-xl">
                         <h3 class="text-xl font-semibold text-white text-center px-4">KEBAGIKAN SUSU SAPI ASLI NEW ZEALAND</h3>
                     </div>
                 </div>
             </div>
-
-            <!-- Card 2 -->
-            <div class="w-1/4 h-full bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div class="bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div class="relative w-full h-32 flex items-center justify-center rounded-xl">
-                    <img src="assets/images/header.jpeg" alt="Card 2 Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                    <img src="assets/images/header.jpeg" alt="Card Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
                     <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center rounded-xl">
                         <h3 class="text-xl font-semibold text-white text-center px-4">GOOD TASTE & GOOD QUALITY</h3>
                     </div>
                 </div>
             </div>
-
-            <!-- Card 3 -->
-            <div class="w-1/4 h-full bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div class="bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div class="relative w-full h-32 flex items-center justify-center rounded-xl">
-                    <img src="assets/images/header.jpeg" alt="Card 3 Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                    <img src="assets/images/header.jpeg" alt="Card Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
                     <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center rounded-xl">
                         <h3 class="text-xl font-semibold text-white text-center px-4">SAHABAT KULINER KELUARGA</h3>
                     </div>
                 </div>
             </div>
-
-            <!-- Card 4 -->
-            <div class="w-1/4 h-full bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div class="bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div class="relative w-full h-32 flex items-center justify-center rounded-xl">
-                    <img src="assets/images/header.jpeg" alt="Card 4 Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                    <img src="assets/images/header.jpeg" alt="Card Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
                     <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center rounded-xl">
                         <h3 class="text-xl font-semibold text-white text-center px-4">KENAPA MESTI PILIH KEJU WINCheez</h3>
                     </div>
@@ -284,9 +312,9 @@
         <div id="particles-js" class="absolute inset-0 z-0"></div>
 
         <!-- Konten utama -->
-        <div class="relative w-full flex flex-wrap items-center z-10">
+        <div class="relative w-full flex flex-col md:flex-row items-center z-10">
             <!-- Gambar di kiri -->
-            <div class="w-1/2 h-full flex items-center justify-center relative">
+            <div class="w-full md:w-1/2 h-full flex items-center justify-center relative">
                 <div class="relative w-[350px] h-[350px] group">
                     <!-- Persegi lebih besar untuk Gambar pertama -->
                     <div class="absolute top-[-10px] left-[-10px] w-[calc(100%+20px)] h-[calc(100%+20px)] bg-white opacity-30 rounded-lg transition-all duration-500 ease-in-out transform group-hover:rotate-[-5deg] group-hover:-translate-y-2"></div>
@@ -302,7 +330,7 @@
             </div>
 
             <!-- Konten teks di kanan -->
-            <div class="w-1/2 h-full flex items-center justify-center">
+            <div class="w-full md:w-1/2 h-full flex items-center justify-center">
                 <div class="text-center p-8">
                     <img src="assets/images/logo.png" alt="ICON" class="mx-auto mb-4 w-20">
                     <h2 class="text-4xl font-bold text-white mb-2">HIGH QUALITY,</h2>
@@ -348,36 +376,35 @@
                 <!-- Scrollable Container -->
                 <div id="scroll-container" class="overflow-hidden scroll-smooth snap-x snap-mandatory w-full">
                     <div class="flex space-x-6 w-max no-scrollbar">
-                        <div class="relative w-72 h-72 p-4 rounded-2xl">
+                        <div class="relative w-80 h-80 p-4 rounded-2xl">
                             <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
                             <img
                                 src="assets/images/banner-sosmed.jpg"
                                 alt="Sample Image"
                                 class="rounded-2xl w-full h-full object-cover transition-opacity" />
                         </div>
-
-                        <div class="relative w-72 h-72 p-4 rounded-2xl">
+                        <div class="relative w-80 h-80 p-4 rounded-2xl">
                             <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
                             <img
                                 src="assets/images/banner-sosmed.jpg"
                                 alt="Sample Image"
                                 class="rounded-2xl w-full h-full object-cover transition-opacity" />
                         </div>
-                        <div class="relative w-72 h-72 p-4 rounded-2xl">
+                        <div class="relative w-80 h-80 p-4 rounded-2xl">
                             <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
                             <img
                                 src="assets/images/banner-sosmed.jpg"
                                 alt="Sample Image"
                                 class="rounded-2xl w-full h-full object-cover transition-opacity" />
                         </div>
-                        <div class="relative w-72 h-72 p-4 rounded-2xl">
+                        <div class="relative w-80 h-80 p-4 rounded-2xl">
                             <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
                             <img
                                 src="assets/images/banner-sosmed.jpg"
                                 alt="Sample Image"
                                 class="rounded-2xl w-full h-full object-cover transition-opacity" />
                         </div>
-                        <div class="relative w-72 h-72 p-4 rounded-2xl">
+                        <div class="relative w-80 h-80 p-4 rounded-2xl">
                             <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
                             <img
                                 src="assets/images/banner-sosmed.jpg"
@@ -412,7 +439,7 @@
 
             <!-- Container Scroll -->
             <div class="relative">
-                <div class="grid grid-cols-4 gap-6 overflow-x-auto pb-4 scrollbar-hide scroll-smooth">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 pb-4 overflow-x-auto md:overflow-visible scrollbar-hide scroll-smooth">
                     <!-- Card 1 -->
                     <div class="min-w-[250px] h-[400px] bg-white rounded-lg shadow-lg p-4 transform transition duration-300 hover:shadow-xl">
                         <div class="w-full h-56 overflow-hidden rounded-md shadow-md">
@@ -506,43 +533,66 @@
                 <p>© 2025 <span class="font-semibold">PT Bangun Rasaguna Lestari</span>. <span class="font-bold">WINCheez®</span> dan semua yang berhubungan dengan merk dan logo telah dilindungi oleh hak cipta.</p>
             </div>
 
-            <!-- <div>
-                <div id="random-product" class="absolute bottom-3 left-0 w-full flex justify-center z-20">
-                    <img src="assets/images/produk-1.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-2.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-3.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-4.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                </div>
+            <div id="random-product" class="absolute bottom-3 left-0 w-full flex justify-evenly z-20">
+                <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-5.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-6.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-7.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-5.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-6.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-7.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-5.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-6.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                <img src="assets/images/produk-7.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
 
-                <div id="random-product" class="absolute bottom-3 left-0 w-full flex justify-end z-20">
-                    <img src="assets/images/produk-1.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-2.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-3.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-4.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                </div>
+            </div>
 
-                <div id="random-product" class="absolute bottom-3 left-0 w-full flex justify-start z-20">
-                    <img src="assets/images/produk-1.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-2.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-3.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                    <img src="assets/images/produk-4.png" alt="Produk" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
-                </div>
-            </div> -->
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Menu -->
     <script>
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const toggleMenuButton = document.getElementById('toggle-menu');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        // Fungsi untuk toggle menu
+        toggleMenuButton.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden'); // Mengubah visibilitas menu
+        });
+
 
         menuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
         // Ambil elemen navbar pertama dan kedua
-        const navbarFirst = document.querySelector('nav:first-of-type');
-        const navbarSecond = document.querySelector('nav:nth-of-type(2)');
+        const navbarFirst = document.querySelector('.navbar-first');
+        const navbarSecond = document.querySelector('.navbar-second');
 
         // Tentukan jarak scroll yang akan memicu perubahan
         const scrollThreshold = 100; // Bisa disesuaikan
@@ -567,6 +617,7 @@
         handleScroll();
     </script>
 
+    <!-- Product -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const slider = document.getElementById("slider");
@@ -635,6 +686,7 @@
         });
     </script>
 
+    <!-- Particle -->
     <script>
         particlesJS("particles-js", {
             particles: {
@@ -683,6 +735,7 @@
         });
     </script>
 
+    <!-- Sosmed -->
     <script>
         const scrollContainer = document.getElementById("scroll-container");
         const prevButton = document.getElementById("prev");
@@ -706,54 +759,95 @@
         });
     </script>
 
+    <!-- Footer -->
     <script>
         window.onload = function() {
             const images = document.querySelectorAll(".product-image");
+            let isAtBottom = false;
+            let animationTriggered = false;
 
-            // Fungsi untuk memberikan efek acak ke gambar
-            function throwProduct() {
-                const randomIndex = Math.floor(Math.random() * images.length); // Pilih gambar acak
-                const selectedImage = images[randomIndex];
+            // Fungsi untuk memeriksa apakah sudah mencapai bagian bawah halaman
+            function checkIfAtBottom() {
+                const scrollPosition = window.innerHeight + window.scrollY;
+                const documentHeight = document.documentElement.scrollHeight;
 
-                // Posisi acak (left) dan waktu acak
-                const randomLeft = Math.floor(Math.random() * window.innerWidth) - 100; // Posisi acak
-                const randomTime = Math.random() * 2 + 2; // Durasi acak antara 2 dan 4 detik
+                // Tambahkan buffer 10px sebelum bagian bawah untuk memastikan animasi dipicu
+                isAtBottom = scrollPosition >= documentHeight - 10;
 
-                // Pilih posisi acak kiri, kanan, atau tengah
-                const positionOptions = ['left', 'center', 'right'];
-                const randomPosition = positionOptions[Math.floor(Math.random() * positionOptions.length)];
-
-                selectedImage.style.transition = `all ${randomTime}s ease-in-out`;
-                selectedImage.style.opacity = 1;
-
-                // Posisi horizontal acak berdasarkan randomPosition
-                if (randomPosition === 'left') {
-                    selectedImage.style.left = `5%`; // Kiri
-                    selectedImage.style.transform = `translateY(-150%)`; // Gerakan dari bawah ke atas
-                } else if (randomPosition === 'right') {
-                    selectedImage.style.left = `90%`; // Kanan
-                    selectedImage.style.transform = `translateY(-150%)`; // Gerakan dari bawah ke atas
-                } else {
-                    selectedImage.style.left = `50%`; // Tengah
-                    selectedImage.style.transform = `translateY(-150%) translateX(-50%)`; // Gerakan dari bawah ke atas
+                // Jika scroll sudah mencapai bagian bawah dan animasi belum dipicu, jalankan animasi
+                if (isAtBottom && !animationTriggered) {
+                    animationTriggered = true; // Tandai animasi sudah dipicu
+                    throwAndDropProducts();
                 }
-
-                // Setelah produk sampai atas, kembali turun dan hilang
-                setTimeout(() => {
-                    selectedImage.style.transform = `translateY(0)`; // Gerakan turun kembali
-                    selectedImage.style.opacity = 0; // Hilangkan gambar setelah turun
-                }, randomTime * 1000); // Delay sesuai durasi animasi naik
-
-                // Setelah produk hilang, ganti dengan produk baru
-                setTimeout(() => {
-                    selectedImage.style.opacity = 0; // Hilangkan gambar
-                    selectedImage.style.transform = 'translateY(100%)'; // Siapkan gambar untuk muncul lagi di bawah
-                }, randomTime * 2000); // Delay agar produk terlihat turun dan hilang
             }
 
-            // Setiap detik, lempar gambar secara acak
-            setInterval(throwProduct, 1000);
+            // Fungsi untuk mereset flag animasi ketika scroll ke atas (opsional)
+            function resetAnimationFlag() {
+                if (window.scrollY < document.documentElement.scrollHeight - window.innerHeight - 10) {
+                    animationTriggered = false; // Reset flag jika scroll kembali ke atas
+                }
+            }
+
+            // Panggil pada scroll event
+            window.addEventListener("scroll", () => {
+                checkIfAtBottom();
+                resetAnimationFlag(); // Reset flag jika scroll ke atas
+            });
+
+            // Panggil pada resize untuk mengupdate perhitungan saat ukuran layar berubah
+            window.addEventListener("resize", () => {
+                checkIfAtBottom();
+            });
+
+            function throwAndDropProducts() {
+                images.forEach((image) => {
+                    const randomX = (Math.random() - 0.5) * 200;
+                    const randomY = (Math.random() * -200) - 150;
+                    const randomRotate = (Math.random() - 0.5) * 90;
+
+                    image.style.transition = `all 0.8s ease-out`;
+                    image.style.opacity = 1;
+                    image.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotate}deg)`;
+
+                    setTimeout(() => {
+                        const rotateUp = 90;
+                        const finalX = (Math.random() - 0.5) * 300;
+                        const finalY = (Math.random() * 200) + 150;
+                        const finalRotate = (Math.random() - 0.5) * 65;
+
+                        image.style.transition = `transform 2.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 2.5s ease-out`;
+                        image.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${rotateUp}deg)`;
+
+                        setTimeout(() => {
+                            image.style.transition = `transform 1.5s ease-in-out, opacity 1.5s ease-out`;
+                            image.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${finalRotate}deg)`;
+                            image.style.opacity = 0.8;
+                        }, 5000);
+                    }, 800);
+                });
+            }
+
+            // Pastikan untuk memeriksa posisi saat halaman pertama kali dimuat
+            checkIfAtBottom();
         };
+    </script>
+
+    <!-- Play Youtube -->
+    <script>
+        const videoTrigger = document.getElementById('videoTrigger');
+        const videoModal = document.getElementById('videoModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalIframe = document.getElementById('modalIframe');
+
+        videoTrigger.addEventListener('click', function() {
+            videoModal.classList.remove('hidden');
+            modalIframe.src = "https://www.youtube.com/embed/61EE8UCJQXY?autoplay=1";
+        });
+
+        closeModal.addEventListener('click', function() {
+            videoModal.classList.add('hidden');
+            modalIframe.src = ""; // Stop video when closing modal
+        });
     </script>
 
 </body>
