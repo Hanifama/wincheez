@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINCHEEZ | Wincheez Indonesia</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="bg-gray-200">
+
+        <header>
+            <nav class="navbar-first top-0 fixed w-full z-20">
+                <div class="p-6 px-8 sm:px-6 lg:px-8 w-full">
+                    <div class="flex items-center justify-between h-16 max-w-7xl mx-auto">
+                        <!-- Left Menu -->
+                        <ul class="hidden md:flex space-x-16 text-blue-800 font-semibold">
+                            <li><a href="#" class="hover:text-blue-500">PRODUK</a></li>
+                            <li><a href="#" class="hover:text-blue-500">MOMEN SPESIAL</a></li>
+                            <li><a href="#" class="hover:text-blue-500">ARTIKEL</a></li>
+                        </ul>
+
+                        <!-- Logo -->
+                        <a href="#" class="flex-shrink-0">
+                            <img src="assets/images/wincheez.png" alt="WINCheez Logo" class="h-20">
+                        </a>
+
+                        <!-- Right Menu -->
+                        <ul class="hidden md:flex space-x-16 text-blue-800 font-semibold">
+                            <li><a href="#" class="hover:text-blue-500">KREASI WINCheez</a></li>
+                            <li><a href="#" class="hover:text-blue-500">TENTANG KAMI</a></li>
+                            <li>
+                                <a class="bg-blue-700 text-white px-4 py-2 rounded-full border-2 border-yellow-400">Shop Now</a>
+                            </li>
+                        </ul>
+
+                        <!-- Mobile Menu Button -->
+                        <button id="menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Mobile Dropdown Menu -->
+                    <div id="dropdown-menu" class="hidden bg-white w-full absolute top-16 left-0 z-30 shadow-lg md:hidden transition-transform transform -translate-y-full">
+                        <div class="p-4 flex justify-between items-center border-b">
+                            <span class="text-lg font-semibold">Menu</span>
+                            <button id="close-menu" class="text-gray-600 text-2xl">&times;</button>
+                        </div>
+                        <a href="#produk" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">PRODUK</a>
+                        <a href="#momen-spesial" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">MOMEN SPESIAL</a>
+                        <a href="#resep" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">RESEP</a>
+                        <a href="#artikel" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">ARTIKEL</a>
+                        <a href="#kreasi" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">KREASI WINCheez</a>
+                        <a href="#tentang-kami" class="block px-6 py-3 text-gray-700 hover:bg-gray-200">TENTANG KAMI</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Navbar kedua (Hanya untuk Desktop) -->
+            <nav class="navbar-second bg-white px-6 py-6 flex items-center w-full fixed z-20 hidden shadow-md md:flex">
+                <div class="flex flex-1 justify-evenly max-w-7xl mx-auto">
+                    <a href="#" class="text-blue-700 font-medium">PRODUK</a>
+                    <a href="#" class="text-blue-700 font-medium">MOMEN SPESIAL</a>
+                    <a href="#" class="text-blue-700 font-medium">RESEP</a>
+                    <a href="#" class="text-blue-700 font-medium">ARTIKEL</a>
+                    <a href="#" class="text-blue-700 font-medium">KREASI WINCheez</a>
+                    <a href="#" class="text-blue-700 font-medium">TENTANG KAMI</a>
+                </div>
+                <a href="#" class="ml-6 px-4 py-2 bg-blue-700 text-white rounded-full border-2 border-yellow-400 text-sm font-bold">SHOP NOW</a>
+            </nav>
+
+        </header>
+
+        <!-- Hero Section -->
+        <section class="relative w-full h-screen overflow-hidden">
+            <!-- Background -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/bg.png');"></div>
+
+            <!-- Grass -->
+            <img src="assets/images/GRASS.png" alt="Grass" class="absolute -bottom-10 w-full h-auto">
+
+            <!-- Cows -->
+            <img src="assets/images/COW_1.png" alt="Cow 1" class="absolute -bottom-5 -left-28 w-[500px] -scale-x-100">>
+            <img src="assets/images/COW_2.png" alt="Cow 2"
+                class="absolute bottom-[100px] left-[380px] transform -translate-x-1/2 w-20">
+            <img src="assets/images/COW_3.png" alt="Cow 3" class="absolute bottom-[150px] left-[450px] w-12">
+            <img src="assets/images/COW_3.png" alt="Cow 3" class="absolute bottom-[200px] left-[550px] w-4 -scale-x-100">
+
+            <!-- Product -->
+            <img src="assets/images/cheddar-premium.png" alt="Product"
+                class="absolute w-[410px] h-[310px] bottom-[170px] -right-24 transform -translate-x-1/2">
+
+            <!-- Light Ring -->
+            <img src="assets/images/LIGHT_2.png" alt="Light Ring"
+                class="absolute bottom-[90px] -right-32 transform -translate-x-1/2 w-[400px] h-[400px] mix-blend-screen">
+
+            <!-- Light Effects -->
+            <img src="assets/images/LIGHT_1.png" alt="Light 1" class="absolute top-[100px] right-[240px] w-48 mix-blend-screen">
+            <img src="assets/images/LIGHT_3.png" alt="Light 3" class="absolute top-[230px] right-[400px] w-64 mix-blend-screen">
+
+            <!-- Vitamins -->
+            <img src="assets/images/VIT_A.png" alt="Vitamin A" class="absolute bottom-[400px] right-32 w-16">
+            <img src="assets/images/VIT_D.png" alt="Vitamin D"
+                class="absolute bottom-[340px] right-14 transform -translate-x-1/2 w-16">
+            <img src="assets/images/VIT_E.png" alt="Vitamin E" class="absolute bottom-[260px] right-24 w-16">
+
+            <!-- Text -->
+            <div class="absolute top-28 left-9 text-right flex flex-col items-center">
+                <h1 class="text-white text-6xl md:text-4xl font-pacifico drop-shadow-lg -rotate-6"
+                    style="font-family: 'Dancing Script', cursive">Kebaikan Susu Sapi Asli</h1><br />
+                <h1 class="text-white text-6xl md:text-6xl font-bold font-pacifico drop-shadow-lg -rotate-6"
+                    style="font-family: 'Libre Baskerville', serif">New Zealand</h1>
+            </div>
+        </section>
+
+        <section class="w-full -mt-10 z-10">
+            <div class="w-full">
+                <!-- Container Scroll -->
+                <div class="relative">
+                    <div id="product-container" class="flex gap-4 overflow-hidden pb-4 pl-10 scrollbar-hide scrollbar-hide w-full">
+
+                        <div class="relative min-w-[250px] h-[320px] bg-white rounded-[30px] shadow-lg p-5 flex flex-col justify-between flex-shrink-0 transition-transform duration-300 ease-in-out group">
+                            <!-- Kotak Gambar dengan Background -->
+                            <div class="relative w-full h-[200px] rounded-xl overflow-visible">
+                                <div class="absolute inset-0 bg-blue-400 transition duration-500 rounded-xl group-hover:brightness-110"></div>
+                                <img src="assets/images/produk-1.png" alt="Wincheez Mozarella"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out scale-100 group-hover:scale-125 group-hover:-translate-y-3 group-hover:translate-y-1 group-hover:z-10">
+                            </div>
+                            <!-- Konten -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold mt-4 transition-colors duration-300 text-blue-800 group-hover:text-blue-600">Wincheez Mozarella</h3>
+                                <p class="text-blue-800 transition-colors duration-300 group-hover:text-gray-800">Extra Stretch</p>
+                            </div>
+                            <!-- Tombol -->
+                            <button class="mt-2 border-2 border-blue-800 text-blue-800 px-4 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-blue-800 hover:text-white hover:scale-105 hover:shadow-md">
+                                Beli Sekarang
+                            </button>
+                        </div>
+
+                        <div class="relative min-w-[250px] h-[320px] bg-white rounded-[30px] shadow-lg p-5 flex flex-col justify-between flex-shrink-0 transition-transform duration-300 ease-in-out group">
+                            <!-- Kotak Gambar dengan Background -->
+                            <div class="relative w-full h-[200px] rounded-xl overflow-visible">
+                                <div class="absolute inset-0 bg-yellow-400 transition duration-500 rounded-xl group-hover:brightness-110"></div>
+                                <img src="assets/images/produk-2.png" alt="Wincheez Mozarella"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out scale-100 group-hover:scale-125 group-hover:-translate-y-3 group-hover:translate-y-1 group-hover:z-10">
+                            </div>
+                            <!-- Konten -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold mt-4 transition-colors duration-300 text-blue-800 group-hover:text-blue-600">Wincheez Mozarella</h3>
+                                <p class="text-blue-800 transition-colors duration-300 group-hover:text-gray-800">Extra Stretch</p>
+                            </div>
+                            <!-- Tombol -->
+                            <button class="mt-2 border-2 border-blue-800 text-blue-800 px-4 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-blue-800 hover:text-white hover:scale-105 hover:shadow-md">
+                                Beli Sekarang
+                            </button>
+                        </div>
+
+                        <div class="relative min-w-[250px] h-[320px] bg-white rounded-[30px] shadow-lg p-5 flex flex-col justify-between flex-shrink-0 transition-transform duration-300 ease-in-out group">
+                            <!-- Kotak Gambar dengan Background -->
+                            <div class="relative w-full h-[200px] rounded-xl overflow-visible">
+                                <div class="absolute inset-0 bg-blue-800 transition duration-500 rounded-xl group-hover:brightness-110"></div>
+                                <img src="assets/images/produk-3.png" alt="Wincheez Mozarella"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out scale-100 group-hover:scale-125 group-hover:-translate-y-3 group-hover:translate-y-1 group-hover:z-10">
+                            </div>
+                            <!-- Konten -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold mt-4 transition-colors duration-300 text-blue-800 group-hover:text-blue-600">Wincheez Mozarella</h3>
+                                <p class="text-blue-800 transition-colors duration-300 group-hover:text-gray-800">Extra Stretch</p>
+                            </div>
+                            <!-- Tombol -->
+                            <button class="mt-2 border-2 border-blue-800 text-blue-800 px-4 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-blue-800 hover:text-white hover:scale-105 hover:shadow-md">
+                                Beli Sekarang
+                            </button>
+                        </div>
+
+                        <div class="relative min-w-[250px] h-[320px] bg-white rounded-[30px] shadow-lg p-5 flex flex-col justify-between flex-shrink-0 transition-transform duration-300 ease-in-out group">
+                            <!-- Kotak Gambar dengan Background -->
+                            <div class="relative w-full h-[200px] rounded-xl overflow-visible">
+                                <div class="absolute inset-0 bg-red-700 transition duration-500 rounded-xl group-hover:brightness-110"></div>
+                                <img src="assets/images/produk-4.png" alt="Wincheez Mozarella"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out scale-100 group-hover:scale-125 group-hover:-translate-y-5 group-hover:z-10">
+                            </div>
+                            <!-- Konten -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold mt-4 transition-colors duration-300 text-blue-800 group-hover:text-blue-600">Wincheez Mozarella</h3>
+                                <p class="text-blue-800 transition-colors duration-300 group-hover:text-gray-800">Extra Stretch</p>
+                            </div>
+                            <!-- Tombol -->
+                            <button class="mt-2 border-2 border-blue-800 text-blue-800 px-4 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-blue-800 hover:text-white hover:scale-105 hover:shadow-md">
+                                Beli Sekarang
+                            </button>
+                        </div>
+
+                        <div class="relative min-w-[250px] h-[320px] bg-white rounded-[30px] shadow-lg p-5 flex flex-col justify-between flex-shrink-0 transition-transform duration-300 ease-in-out group">
+                            <!-- Kotak Gambar dengan Background -->
+                            <div class="relative w-full h-[200px] rounded-xl overflow-visible">
+                                <div class="absolute inset-0 bg-blue-400 transition duration-500 rounded-xl group-hover:brightness-110"></div>
+                                <img src="assets/images/produk-1.png" alt="Wincheez Mozarella"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out scale-100 group-hover:scale-125 group-hover:-translate-y-3 group-hover:translate-y-1 group-hover:z-10">
+                            </div>
+                            <!-- Konten -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold mt-4 transition-colors duration-300 text-blue-800 group-hover:text-blue-600">Wincheez Mozarella</h3>
+                                <p class="text-blue-800 transition-colors duration-300 group-hover:text-gray-800">Extra Stretch</p>
+                            </div>
+                            <!-- Tombol -->
+                            <button class="mt-2 border-2 border-blue-800 text-blue-800 px-4 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-blue-800 hover:text-white hover:scale-105 hover:shadow-md">
+                                Beli Sekarang
+                            </button>
+                        </div>
+
+                        <div class="relative min-w-[250px] h-[320px] bg-white rounded-[30px] shadow-lg p-5 flex flex-col justify-between flex-shrink-0 transition-transform duration-300 ease-in-out group">
+                            <!-- Kotak Gambar dengan Background -->
+                            <div class="relative w-full h-[200px] rounded-xl overflow-visible">
+                                <div class="absolute inset-0 bg-blue-400 transition duration-500 rounded-xl group-hover:brightness-110"></div>
+                                <img src="assets/images/produk-1.png" alt="Wincheez Mozarella"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out scale-100 group-hover:scale-125 group-hover:-translate-y-3 group-hover:translate-y-1 group-hover:z-10">
+                            </div>
+                            <!-- Konten -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold mt-4 transition-colors duration-300 text-blue-800 group-hover:text-blue-600">Wincheez Mozarella</h3>
+                                <p class="text-blue-800 transition-colors duration-300 group-hover:text-gray-800">Extra Stretch</p>
+                            </div>
+                            <!-- Tombol -->
+                            <button class="mt-2 border-2 border-blue-800 text-blue-800 px-4 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-blue-800 hover:text-white hover:scale-105 hover:shadow-md">
+                                Beli Sekarang
+                            </button>
+                        </div>
+
+                        <div class="relative min-w-[250px] h-[320px] bg-white rounded-[30px] shadow-lg p-5 flex flex-col justify-between flex-shrink-0 transition-transform duration-300 ease-in-out group">
+                            <!-- Kotak Gambar dengan Background -->
+                            <div class="relative w-full h-[200px] rounded-xl overflow-visible">
+                                <div class="absolute inset-0 bg-blue-400 transition duration-500 rounded-xl group-hover:brightness-110"></div>
+                                <img src="assets/images/produk-1.png" alt="Wincheez Mozarella"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out scale-100 group-hover:scale-125 group-hover:-translate-y-3 group-hover:translate-y-1 group-hover:z-10">
+                            </div>
+                            <!-- Konten -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold mt-4 transition-colors duration-300 text-blue-800 group-hover:text-blue-600">Wincheez Mozarella</h3>
+                                <p class="text-blue-800 transition-colors duration-300 group-hover:text-gray-800">Extra Stretch</p>
+                            </div>
+                            <!-- Tombol -->
+                            <button class="mt-2 border-2 border-blue-800 text-blue-800 px-4 py-1 rounded-full transition-all duration-300 ease-in-out hover:bg-blue-800 hover:text-white hover:scale-105 hover:shadow-md">
+                                Beli Sekarang
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <section class="relative w-full overflow-x-auto h-[15px] bg-blue-50 max-w-6xl mx-auto px-4 mt-10">
+                        <div id="slider-track" class="w-full h-full bg-gray-300 rounded-lg"></div>
+                        <div id="slider" class="absolute top-0 left-0 w-12 h-full bg-white border-2 border-white shadow-xl rounded-xl transform translate-y-0 cursor-pointer transition-all ease-out duration-300 hover:shadow-2xl"></div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10 p-4 relative w-full flex justify-center items-center">
+            <div class="relative w-full h-auto">
+                <!-- Gambar Dasar (Paling Bawah) - Hanya muncul di perangkat desktop dan tablet -->
+                <img src="assets/images/s-1.png" alt="Banner" class="w-full h-auto object-cover relative z-0 sm:hidden md:block lg:block">
+
+                <!-- Gambar Dasar (Paling Bawah) - Hanya muncul di perangkat tablet dan desktop -->
+                <img src="assets/images/s-2.png" alt="Banner" class="absolute lg:bottom-[12px] lg:right-[39px] sm:bottom-[5px] sm:right-[20px] md:bottom-[5px] md:right-[25px] w-auto h-auto sm:h-[320px] lg:h-[625px] object-cover z-10 sm:block md:block lg:block">
+
+                <img src="assets/images/s-3.png" alt="Banner" class="absolute top-[50px] sm:top-[80px] md:top-[100px] right-[50px] sm:right-[150px] md:right-[300px] sm:w-[50px] md:w-1/4 h-auto object-cover z-10 sm:block md:block lg:block">
+
+                <img src="assets/images/s-4.png" alt="Banner" class="absolute top-[40px] sm:top-[50px] md:top-[63px] left-3 sm:left-4 md:left-5 w-[100px] sm:w-[120px] md:w-[150px] h-auto object-cover z-10 sm:block md:block lg:block">
+
+                <img src="assets/images/s-5.png" alt="Banner" class="absolute top-[200px] sm:top-[250px] md:top-[290px] left-[50%] sm:left-[55%] md:left-[620px] transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 h-auto object-cover z-10 sm:block md:block lg:block">
+            </div>
+
+            <div class="absolute left-[120px] bottom-[180px] grid grid-cols-3 gap-2 hidden lg:grid">
+                <!-- Baris pertama dengan 3 kolom -->
+                <div class="flex col-span-3 space-x-4 items-center">
+                    <!-- TikTok Link dan Icon -->
+                    <a href="https://www.tiktok.com" target="_blank" class="flex items-center space-x-2">
+                        <img src="path-to-your-tiktok-icon.png" alt="TikTok" class="w-6 h-6">
+                        <span>WINCheez.id</span>
+                    </a>
+
+                    <!-- Instagram Link dan Icon -->
+                    <a href="https://www.instagram.com" target="_blank" class="flex items-center space-x-2">
+                        <img src="path-to-your-instagram-icon.png" alt="Instagram" class="w-6 h-6">
+                        <span>WINCHeez_id</span>
+                    </a>
+
+                    <!-- Facebook Link dan Icon -->
+                    <a href="https://www.facebook.com" target="_blank" class="flex items-center space-x-2">
+                        <img src="path-to-your-facebook-icon.png" alt="Facebook" class="w-6 h-6">
+                        <span>WINCheez.id</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gambar Banner (Hanya untuk tampilan mobile) -->
+            <img src="assets/images/banner.png" alt="Banner" class="w-full h-auto object-cover relative z-0 sm:block md:block lg:hidden">
+
+
+            <div class="md:w-[505px] md:h-[280px] md:left-[85px] md:top-[190px] w-1/2 absolute inset-0 flex items-center justify-center cursor-pointer z-10" id="videoTrigger">
+                <!-- Iframe hanya tampil di perangkat desktop -->
+                <iframe
+                    class="w-full h-full rounded-2xl z-0 hidden lg:block"
+                    src="https://www.youtube.com/embed/61EE8UCJQXY"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+                <!-- Span tampil di perangkat selain desktop -->
+                <span class="w-full h-full absolute lg:w-full lg:h-full sm:w-1/2 sm:h-1/2 lg:left-0 lg:bottom-0 sm:left-[20px] sm:bottom-[180px] rounded-2xl cursor-pointer bg-white bg-opacity-5 z-10"></span>
+            </div>
+
+            <!-- Modal Popup -->
+            <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div class="relative w-full max-w-[800px] h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[450px]">
+                    <iframe class="w-full h-full rounded-xl" id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+                    <button id="closeModal" class="absolute top-2 right-2 text-white text-2xl font-bold">X</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full p-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Card Template -->
+                <div class="bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="relative w-full h-32 flex items-center justify-center rounded-xl">
+                        <img src="assets/images/header.jpeg" alt="Card Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center rounded-xl">
+                            <h3 class="text-xl font-semibold text-white text-center px-4">KEBAGIKAN SUSU SAPI ASLI NEW ZEALAND</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="relative w-full h-32 flex items-center justify-center rounded-xl">
+                        <img src="assets/images/header.jpeg" alt="Card Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center rounded-xl">
+                            <h3 class="text-xl font-semibold text-white text-center px-4">GOOD TASTE & GOOD QUALITY</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="relative w-full h-32 flex items-center justify-center rounded-xl">
+                        <img src="assets/images/header.jpeg" alt="Card Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center rounded-xl">
+                            <h3 class="text-xl font-semibold text-white text-center px-4">SAHABAT KULINER KELUARGA</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="relative w-full h-32 flex items-center justify-center rounded-xl">
+                        <img src="assets/images/header.jpeg" alt="Card Image" class="absolute inset-0 object-cover w-full h-full rounded-xl">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center rounded-xl">
+                            <h3 class="text-xl font-semibold text-white text-center px-4">KENAPA MESTI PILIH KEJU WINCheez</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative w-full h-screen flex items-center bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 px-8">
+            <!-- Background Particles -->
+            <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+            <!-- Konten utama -->
+            <div class="relative w-full flex flex-col md:flex-row items-center z-10">
+                <!-- Gambar di kiri -->
+                <div class="w-full md:w-1/2 h-full flex items-center justify-center relative">
+                    <div class="relative w-[350px] h-[350px] group">
+                        <!-- Persegi lebih besar untuk Gambar pertama -->
+                        <div class="absolute top-[-10px] left-[-10px] w-[calc(100%+20px)] h-[calc(100%+20px)] bg-white opacity-30 rounded-lg transition-all duration-500 ease-in-out transform group-hover:rotate-[-5deg] group-hover:-translate-y-2"></div>
+                        <img src="assets/images/actifity.jpg" alt="Image 1"
+                            class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-2xl transition-all duration-500 ease-in-out transform group-hover:rotate-[-5deg] group-hover:-translate-y-2 group-hover:shadow-[0px_0px_20px_rgba(255,255,255,0.3)]">
+
+                        <!-- Persegi lebih besar untuk Gambar kedua -->
+                        <div class="absolute -top-[30px] left-[10px] w-[calc(100%+20px)] h-[calc(100%+20px)] bg-white opacity-30 rounded-lg transition-all duration-500 ease-in-out transform group-hover:rotate-[2deg] group-hover:-translate-y-1"></div>
+                        <img src="assets/images/actifity.jpg" alt="Image 2"
+                            class="absolute -top-5 left-5 w-full h-full object-cover rounded-lg shadow-2xl transition-all duration-500 ease-in-out transform group-hover:rotate-[2deg] group-hover:-translate-y-1 group-hover:shadow-[0px_0px_20px_rgba(255,255,255,0.3)]">
+                    </div>
+
+                </div>
+
+                <!-- Konten teks di kanan -->
+                <div class="w-full md:w-1/2 h-full flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <img src="assets/images/logo.png" alt="ICON" class="mx-auto mb-4 w-20">
+                        <h2 class="text-4xl font-bold text-white mb-2">HIGH QUALITY,</h2>
+                        <h2 class="text-4xl font-bold text-white mb-4">POWERFUL TECHNOLOGY</h2>
+                        <p class="text-lg text-gray-200 max-w-md mx-auto">
+                            Keju WINCheez berkomitmen untuk menghadirkan produk yang diolah melalui teknologi terkini sehingga menghasilkan produk higienis dengan cita rasa terbaik.
+                        </p>
+                        <button class="mt-6 text-white border-2 border-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto hover:text-white transition-all">
+                            Pelajari Lebih Lanjut
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full h-auto md:h-screen relative overflow-hidden">
+            <!-- Background Image -->
+            <img src="assets/images/banner-ig.jpeg" alt="Header"
+                class="w-full h-full rounded-3xl object-cover absolute inset-0 z-0 p-8 ">
+
+            <!-- Content on top of the background image -->
+            <div class="relative z-10 w-full">
+                <h1 class="text-3xl font-bold text-center text-white mt-20 tracking-wide drop-shadow-[2px_2px_0px_#1d4ed8] 
+                    drop-shadow-[-2px_-2px_0px_#1d4ed8] drop-shadow-[2px_-2px_0px_#1d4ed8] drop-shadow-[-2px_2px_0px_#1d4ed8]">
+                    IKUTI KESERUANNYA HANYA DI
+                </h1>
+
+                <!-- Bullets Section -->
+                <div class="flex justify-center space-x-6 mt-5">
+                    <div class="w-14 h-14 bg-white opacity-40 rounded-full"></div>
+                    <div class="w-14 h-14 bg-white opacity-40 rounded-full"></div>
+                    <div class="w-14 h-14 bg-white opacity-40 rounded-full"></div>
+                </div>
+
+                <!-- Wrapper for Scrolling -->
+                <div class="relative w-full flex justify-center items-center mt-10">
+                    <!-- Left Arrow -->
+                    <button id="prev" class="absolute left-10 w-12 h-12 flex items-center justify-center bg-white opacity-40 text-gray-600 rounded-full shadow-lg z-20">
+                        ❮
+                    </button>
+
+
+                    <!-- Scrollable Container -->
+                    <div id="scroll-container" class="overflow-hidden scroll-smooth snap-x snap-mandatory w-full">
+                        <div class="flex space-x-6 w-max no-scrollbar">
+                            <div class="relative w-80 h-80 p-4 rounded-2xl">
+                                <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
+                                <img
+                                    src="assets/images/banner-sosmed.jpg"
+                                    alt="Sample Image"
+                                    class="rounded-2xl w-full h-full object-cover transition-opacity" />
+                            </div>
+                            <div class="relative w-80 h-80 p-4 rounded-2xl">
+                                <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
+                                <img
+                                    src="assets/images/banner-sosmed.jpg"
+                                    alt="Sample Image"
+                                    class="rounded-2xl w-full h-full object-cover transition-opacity" />
+                            </div>
+                            <div class="relative w-80 h-80 p-4 rounded-2xl">
+                                <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
+                                <img
+                                    src="assets/images/banner-sosmed.jpg"
+                                    alt="Sample Image"
+                                    class="rounded-2xl w-full h-full object-cover transition-opacity" />
+                            </div>
+                            <div class="relative w-80 h-80 p-4 rounded-2xl">
+                                <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
+                                <img
+                                    src="assets/images/banner-sosmed.jpg"
+                                    alt="Sample Image"
+                                    class="rounded-2xl w-full h-full object-cover transition-opacity" />
+                            </div>
+                            <div class="relative w-80 h-80 p-4 rounded-2xl">
+                                <div class="absolute inset-0 -z-10 rounded-2xl bg-white opacity-30 shadow-lg"></div>
+                                <img
+                                    src="assets/images/banner-sosmed.jpg"
+                                    alt="Sample Image"
+                                    class="rounded-2xl w-full h-full object-cover transition-opacity" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Arrow -->
+                    <button id="next" class="absolute right-10 w-12 h-12 flex items-center justify-center bg-white opacity-40 text-gray-600 rounded-full shadow-lg z-20">
+                        ❯
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-8">
+            <img src="assets/images/banner-ytb.jpeg" alt="Header" class="w-full h-full rounded-lg object-cover">
+        </section>
+
+        <section class="w-full p-8">
+            <div class="px-4">
+                <!-- Judul -->
+                <h1 class="text-3xl font-bold text-center text-white mb-6 tracking-wide relative 
+           drop-shadow-[2px_2px_0px_#1d4ed8] 
+           drop-shadow-[-2px_-2px_0px_#1d4ed8] 
+           drop-shadow-[2px_-2px_0px_#1d4ed8] 
+           drop-shadow-[-2px_2px_0px_#1d4ed8]">
+                    IDE KREASI SAJIAN ISTIMEWA
+                </h1>
+
+
+                <!-- Container Scroll -->
+                <div class="relative">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 pb-4 overflow-x-auto md:overflow-visible scrollbar-hide scroll-smooth">
+                        <!-- Card 1 -->
+                        <div class="min-w-[250px] h-[400px] bg-white rounded-lg shadow-lg p-4 transform transition duration-300 hover:shadow-xl">
+                            <div class="w-full h-56 overflow-hidden rounded-md shadow-md">
+                                <img src="assets/images/cook.jpg" alt="Produk 1" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-8">
+                                <h3 class="text-lg font-semibold">CHEESY CROMBOLONI</h3>
+                                <button class="w-full mt-6 py-1 border-2 border-blue-800 text-blue-800 rounded-full">SELENGKAPNYA</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="min-w-[250px] h-[400px] bg-white rounded-lg shadow-lg p-4 transform transition duration-300 hover:shadow-xl">
+                            <div class="w-full h-56 overflow-hidden rounded-md shadow-md">
+                                <img src="assets/images/cook.jpg" alt="Produk 2" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-8">
+                                <h3 class="text-lg font-semibold">MACAROONS</h3>
+                                <button class="w-full mt-6 py-1 border-2 border-blue-800 text-blue-800 rounded-full">SELENGKAPNYA</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="min-w-[250px] h-[400px] bg-white rounded-lg shadow-lg p-4 transform transition duration-300 hover:shadow-xl">
+                            <div class="w-full h-56 overflow-hidden rounded-md shadow-md">
+                                <img src="assets/images/cook.jpg" alt="Produk 3" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-8">
+                                <h3 class="text-lg font-semibold">CHICKEN CHEESE SKEWER</h3>
+                                <button class="w-full mt-6 py-1 border-2 border-blue-800 text-blue-800 rounded-full">SELENGKAPNYA</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="min-w-[250px] h-[400px] bg-white rounded-lg shadow-lg p-4 transform transition duration-300 hover:shadow-xl">
+                            <div class="w-full h-56 overflow-hidden rounded-md shadow-md">
+                                <img src="assets/images/cook.jpg" alt="Produk 4" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-8">
+                                <h3 class="text-lg font-semibold">DONAT MERAH PUTIH</h3>
+                                <button class="w-full mt-6 py-1 border-2 border-blue-800 text-blue-800 rounded-full">SELENGKAPNYA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <footer class="bg-white text-blue-300 py-8 rounded-t-3xl relative overflow-hidden">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap gap-4">
+                    <!-- Bagian 1: Logo -->
+                    <div class="h-40 sm:w-[260px]">
+                        <img src="assets/images/wincheez.png" alt="Logo" class="h-full w-full m-0 object-cover">
+                    </div>
+
+                    <!-- Bagian 2: FAQ & Contact, Syarat & Ketentuan -->
+                    <div class="sm:w-1/6 p-4">
+                        <ul>
+                            <li><a href="#" class="text-sm hover:underline">ABOUT US</a></li>
+                            <li><a href="#" class="text-sm hover:underline">FAQ</a></li>
+                            <li><a href="#" class="text-sm hover:underline">CONTACT</a></li>
+                            <li><a href="#" class="text-sm hover:underline">SYARAT & KETENTUAN</a></li>
+                            <li><a href="#" class="text-sm hover:underline">KEBIJAKAN PRIVASI</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Bagian 3: Nomor & Alamat Email -->
+                    <div class="sm:w-1/4 p-4">
+                        <p class="text-sm">+62 812 345 678</p>
+                        <p class="text-sm"><a href="mailto:support@wicheez.com" class="text-blue-400 hover:underline">customer.care@wicheez.com</a></p>
+                        <p class="text-sm">Jalan Mekar Raya No.kav.15C, Mekar Mulya, Kec. Panyileukan, Kota Bandung, Jawa Barat 40292</p>
+                    </div>
+
+                    <!-- Bagian 4: Promo & Hadiah -->
+                    <div class="w-full sm:w-[420px] p-4">
+                        <h4 class="text-sm font-semibold">Ingin dapat informasi seputar promo & hadiah dari WINCheez?</h4>
+                        <p class="text-sm mb-4">Daftar & segera dapatkan kesempatannya!</p>
+                        <input type="email" placeholder="Masukkan email Anda." class="p-2 text-sm mb-4 rounded-lg bg-gray-900 text-white">
+                        <div class="flex justify-start space-x-6 mt-3 z-10 relative">
+                            <div class="w-10 h-10 bg-blue-200 rounded-full"></div>
+                            <div class="w-10 h-10 bg-blue-200 rounded-full"></div>
+                            <div class="w-10 h-10 bg-blue-200 rounded-full"></div>
+                            <div class="w-10 h-10 bg-blue-200 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-[10px] text-gray-500">
+                    <p>© 2025 <span class="font-semibold">PT Bangun Rasaguna Lestari</span>. <span class="font-bold">WINCheez®</span> dan semua yang berhubungan dengan merk dan logo telah dilindungi oleh hak cipta.</p>
+                </div>
+
+                <div id="random-product" class="absolute bottom-3 left-0 w-full flex justify-evenly z-20">
+                    <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-5.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-6.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-7.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-5.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-6.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-7.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-1.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-2.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-3.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-4.png" class="product-image w-16 h-16 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-5.png" class="product-image w-8 h-8 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-6.png" class="product-image w-12 h-12 object-cover rounded-lg opacity-0 transform" />
+                    <img src="assets/images/produk-7.png" class="product-image w-10 h-10 object-cover rounded-lg opacity-0 transform" />
+
+                </div>
+
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+<!-- Navbar -->
+<script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('dropdown-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const navbarFirst = document.querySelector('.navbar-first');
+    const navbarSecond = document.querySelector('.navbar-second');
+    const scrollThreshold = 100;
+
+    // Toggle mobile menu
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        setTimeout(() => {
+            mobileMenu.classList.toggle('-translate-y-full');
+        }, 10);
+    });
+
+    closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.add('-translate-y-full');
+        setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+        }, 300);
+    });
+
+    // Handle navbar swap on scroll (Desktop Only)
+    function handleScroll() {
+        if (window.innerWidth >= 768) {
+            if (window.scrollY > scrollThreshold) {
+                navbarFirst.style.display = 'none';
+                navbarSecond.style.display = 'flex';
+            } else {
+                navbarFirst.style.display = 'flex';
+                navbarSecond.style.display = 'none';
+            }
+        } else {
+            navbarFirst.style.display = 'flex';
+            navbarSecond.style.display = 'none';
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    handleScroll();
+</script>
+
+<!-- Product -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const slider = document.getElementById("slider");
+        const scrollContainer = document.getElementById("product-container");
+        const sliderTrack = document.getElementById("slider-track");
+
+        let isDragging = false;
+        let startX, startLeft;
+        let animationFrame;
+
+        // Menambahkan efek smooth scroll ke elemen container
+        scrollContainer.style.scrollBehavior = "smooth";
+
+        scrollContainer.addEventListener("scroll", () => {
+            if (scrollContainer.scrollLeft > 10) {
+                scrollContainer.classList.remove("pl-10");
+            } else {
+                scrollContainer.classList.add("pl-10");
+            }
+
+            // Update posisi slider saat scroll container di-scroll
+            updateSliderPosition();
+        });
+
+        function updateSliderPosition() {
+            let maxSliderMove = sliderTrack.clientWidth - slider.clientWidth;
+            let maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+            let scrollRatio = scrollContainer.scrollLeft / maxScroll;
+            let sliderPosition = scrollRatio * maxSliderMove;
+
+            slider.style.transform = `translateX(${sliderPosition}px)`;
+        }
+
+        function updateScroll(x) {
+            let maxSliderMove = sliderTrack.clientWidth - slider.clientWidth;
+            let maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+            x = Math.max(0, Math.min(maxSliderMove, x));
+
+            // Animasi scroll agar lebih smooth
+            cancelAnimationFrame(animationFrame);
+            animationFrame = requestAnimationFrame(() => {
+                slider.style.transform = `translateX(${x}px)`;
+                scrollContainer.scrollLeft = (x / maxSliderMove) * maxScroll;
+            });
+        }
+
+        slider.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            startX = e.clientX - slider.offsetLeft;
+            startLeft = slider.offsetLeft;
+            slider.style.cursor = "grabbing";
+        });
+
+        document.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            let x = e.clientX - startX;
+            updateScroll(x);
+        });
+
+        document.addEventListener("mouseup", () => {
+            isDragging = false;
+            slider.style.cursor = "grab";
+        });
+    });
+</script>
+
+<!-- Particle -->
+<script>
+    particlesJS("particles-js", {
+        particles: {
+            number: {
+                value: 80,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            color: {
+                value: "#ffffff"
+            },
+            shape: {
+                type: "circle",
+                stroke: {
+                    width: 0,
+                    color: "#000000"
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: false
+            },
+            size: {
+                value: 5,
+                random: true
+            },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 6,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false
+            }
+        }
+    });
+</script>
+
+<!-- Sosmed -->
+<script>
+    const scrollContainer = document.getElementById("scroll-container");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+
+    // Atur jarak geser agar item pertama & terakhir sejajar dengan layar
+    const scrollAmount = 280;
+
+    nextButton.addEventListener("click", () => {
+        scrollContainer.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth"
+        });
+    });
+
+    prevButton.addEventListener("click", () => {
+        scrollContainer.scrollBy({
+            left: -scrollAmount,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<!-- Footer -->
+<script>
+    window.onload = function() {
+        const images = document.querySelectorAll(".product-image");
+        let isAtBottom = false;
+        let animationTriggered = false;
+
+        // Fungsi untuk memeriksa apakah sudah mencapai bagian bawah halaman
+        function checkIfAtBottom() {
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            // Tambahkan buffer 10px sebelum bagian bawah untuk memastikan animasi dipicu
+            isAtBottom = scrollPosition >= documentHeight - 10;
+
+            // Jika scroll sudah mencapai bagian bawah dan animasi belum dipicu, jalankan animasi
+            if (isAtBottom && !animationTriggered) {
+                animationTriggered = true; // Tandai animasi sudah dipicu
+                throwAndDropProducts();
+            }
+        }
+
+        // Fungsi untuk mereset flag animasi ketika scroll ke atas (opsional)
+        function resetAnimationFlag() {
+            if (window.scrollY < document.documentElement.scrollHeight - window.innerHeight - 10) {
+                animationTriggered = false; // Reset flag jika scroll kembali ke atas
+            }
+        }
+
+        // Panggil pada scroll event
+        window.addEventListener("scroll", () => {
+            checkIfAtBottom();
+            resetAnimationFlag(); // Reset flag jika scroll ke atas
+        });
+
+        // Panggil pada resize untuk mengupdate perhitungan saat ukuran layar berubah
+        window.addEventListener("resize", () => {
+            checkIfAtBottom();
+        });
+
+        function throwAndDropProducts() {
+            images.forEach((image) => {
+                const randomX = (Math.random() - 0.5) * 200;
+                const randomY = (Math.random() * -200) - 150;
+                const randomRotate = (Math.random() - 0.5) * 90;
+
+                image.style.transition = `all 0.8s ease-out`;
+                image.style.opacity = 1;
+                image.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotate}deg)`;
+
+                setTimeout(() => {
+                    const rotateUp = 90;
+                    const finalX = (Math.random() - 0.5) * 300;
+                    const finalY = (Math.random() * 200) + 150;
+                    const finalRotate = (Math.random() - 0.5) * 65;
+
+                    image.style.transition = `transform 2.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 2.5s ease-out`;
+                    image.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${rotateUp}deg)`;
+
+                    setTimeout(() => {
+                        image.style.transition = `transform 1.5s ease-in-out, opacity 1.5s ease-out`;
+                        image.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${finalRotate}deg)`;
+                        image.style.opacity = 0.8;
+                    }, 5000);
+                }, 800);
+            });
+        }
+
+        // Pastikan untuk memeriksa posisi saat halaman pertama kali dimuat
+        checkIfAtBottom();
+    };
+</script>
+
+<!-- Play Youtube -->
+<script>
+    const videoTrigger = document.getElementById('videoTrigger');
+    const videoModal = document.getElementById('videoModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalIframe = document.getElementById('modalIframe');
+
+    videoTrigger.addEventListener('click', function() {
+        videoModal.classList.remove('hidden');
+        modalIframe.src = "https://www.youtube.com/embed/61EE8UCJQXY?autoplay=1";
+    });
+
+    closeModal.addEventListener('click', function() {
+        videoModal.classList.add('hidden');
+        modalIframe.src = "";
+    });
+</script>
+
+</html>

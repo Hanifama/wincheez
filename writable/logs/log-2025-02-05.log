@@ -1,0 +1,322 @@
+CRITICAL - 2025-02-05 02:34:09 --> ErrorException: Undefined array key "images"
+[Method: GET, Route: product/1]
+in APPPATH\Views\detailsProduct.php on line 16.
+ 1 APPPATH\Views\detailsProduct.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "images"', 'C:\\laragon\\www\\landing-wincheez\\app\\Views\\detailsProduct.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\landing-wincheez\\app\\Views\\detailsProduct.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 5 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 02:34:19 --> ErrorException: Undefined array key "images"
+[Method: GET, Route: product/1]
+in APPPATH\Views\detailsProduct.php on line 16.
+ 1 APPPATH\Views\detailsProduct.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "images"', 'C:\\laragon\\www\\landing-wincheez\\app\\Views\\detailsProduct.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\landing-wincheez\\app\\Views\\detailsProduct.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 5 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 02:34:19 --> ErrorException: Undefined array key "images"
+[Method: GET, Route: product/1]
+in APPPATH\Views\detailsProduct.php on line 16.
+ 1 APPPATH\Views\detailsProduct.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "images"', 'C:\\laragon\\www\\landing-wincheez\\app\\Views\\detailsProduct.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\landing-wincheez\\app\\Views\\detailsProduct.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 5 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 02:37:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "detailsProduct.php"
+[Method: GET, Route: product/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('detailsProduct.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 3 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 02:37:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "detailsProduct.php"
+[Method: GET, Route: product/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('detailsProduct.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 3 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 02:39:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "detailsProduct.php"
+[Method: GET, Route: product/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('detailsProduct.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 3 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 02:39:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "detailsProduct.php"
+[Method: GET, Route: product/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('detailsProduct.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 3 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 02:39:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "detailsProduct.php"
+[Method: GET, Route: product/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('detailsProduct.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 3 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 02:39:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "detailsProduct.php"
+[Method: GET, Route: product/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('detailsProduct.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detailsProduct', [], true)
+ 3 APPPATH\Controllers\Home.php(103): view('detailsProduct', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailProduct('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:19:44 --> ErrorException: Undefined variable $navbar
+[Method: GET, Route: article/1]
+in APPPATH\Views\home.php on line 16.
+ 1 APPPATH\Views\home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $navbar', 'C:\\laragon\\www\\landing-wincheez\\app\\Views\\home.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\landing-wincheez\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('home')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailArticle()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:20:25 --> ErrorException: Undefined variable $navbar
+[Method: GET, Route: article/1]
+in APPPATH\Views\home.php on line 16.
+ 1 APPPATH\Views\home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $navbar', 'C:\\laragon\\www\\landing-wincheez\\app\\Views\\home.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\landing-wincheez\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(111): view('home')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailArticle()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:56:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:57:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:57:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:57:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:57:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:57:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:57:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:58:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:59:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:59:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:59:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:59:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
+CRITICAL - 2025-02-05 04:59:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages.home"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages.home')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages.home', [], true)
+ 3 APPPATH\Controllers\Home.php(19): view('pages.home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\landing-wincheez\\public\\index.php')
