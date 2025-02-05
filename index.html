@@ -95,14 +95,14 @@
     <img src="assets/images/GRASS.png" alt="Grass"
     data-direction="bottom"
          class="absolute -bottom-5 md:-bottom-10 w-full h-auto hero-element transition-transform duration-500 scale-90 md:scale-100" 
-         style="opacity:1;">
+         style="transform: translateY(100vw); opacity:1;">
 
-    <!-- Cows -->
-    <img src="assets/images/COW_1.png" alt="Cow 1"
-    data-direction="left"
-    id="flipped"
-    class="absolute -bottom-5 -left-20 md:-left-28 w-[300px] md:w-[500px] hero-element transition-transform duration-500 transform translate-x-[-50px] scale-x-100"
-    style="opacity:1;">
+<!-- Cows -->
+<img src="assets/images/COW_1.png" alt="Cow 1"
+     data-direction="bottom"
+     id="flipped"
+     class="absolute -bottom-5 -left-20 md:-left-28 w-[300px] md:w-[500px] hero-element transition-transform duration-500 transform scale-x-100"
+     style="transform: translateY(100vw);opacity:1;">
 
 
     <!-- Product -->
@@ -120,12 +120,12 @@
     <!-- Light Effects -->
     <img src="assets/images/LIGHT_1.png" alt="Light 1"
     data-direction="right"
-    class="absolute top-[300px] md:top-[285px] right-[120px] md:right-[240px] w-24 md:w-48 mix-blend-screen hero-element transition-transform duration-500"
+    class="absolute bottom-[390px] md:bottom-[405px] right-[110px] md:right-[240px] w-24 md:w-48 mix-blend-screen hero-element transition-transform duration-500 scale-100"
     style="transform: translateX(100vw);">
 
     <img src="assets/images/LIGHT_3.png" alt="Light 3"
     data-direction="right"
-    class="absolute top-[340px] md:top-[330px] right-[220px] md:right-[430px] w-32 md:w-64 mix-blend-screen hero-element transition-transform duration-500"
+    class="absolute bottom-[250px] md:bottom-[140px] right-[220px] md:right-[430px] w-32 md:w-64 mix-blend-screen hero-element transition-transform duration-500"
     style="transform: translateX(100vw);">
 
     <!-- Vitamins -->
@@ -146,19 +146,19 @@
 
     <!-- Cows -->
     <img src="assets/images/COW_2.png" alt="Cow 2"
-    data-direction="left"
+    data-direction="bottom"
     class="absolute bottom-[30px] left-[250px] md:bottom-[100px] md:left-[380px] -translate-x-1/2 w-12 md:w-20 hero-element transition-transform duration-500"
-    style="transform: translateX(-50px); opacity:1;">
+    style="transform: translateY(100vw); opacity:1;">
 
     <img src="assets/images/COW_3.png" alt="Cow 3"
-    data-direction="left"
+    data-direction="bottom"
     class="absolute bottom-[50px] left-[320px] md:bottom-[150px] md:left-[450px] w-8 md:w-12 hero-element transition-transform duration-500"
-    style="transform: translateX(-50px); opacity:1;">
+    style="transform: translateY(100vw); opacity:1;">
 
     <img src="assets/images/COW_3.png" alt="Cow 3"
-    data-direction="left"
+    data-direction="bottom"
     class="absolute bottom-[60px] left-[380px] md:bottom-[200px] md:left-[550px] w-4 md:w-4 hero-element transition-transform duration-500"
-    style="transform: translateX(-50px); opacity:1;">
+    style="transform: translateY(100vw); opacity:1;">
 
     <!-- Text -->
     <div data-direction="left"
@@ -1037,51 +1037,46 @@
         modalIframe.src = ""; // Stop video when closing modal
     });
 </script>
+
 <script>
     const OFFSET_MAX = 20;         
     const vanishThreshold = 50;    
     const vanishMax = 1000;         
   
     const updateHeroElements = () => {
-  const scrollY = window.scrollY;
-  document.querySelectorAll('.hero-element[data-direction]').forEach(el => {
-    const direction = el.getAttribute('data-direction');
-    let offset;
-
-    if (scrollY < vanishThreshold) {
-      const progress = scrollY / vanishThreshold;
-      offset = progress * OFFSET_MAX;
-    } else {
-      const extraProgress = Math.min((scrollY - vanishThreshold) / (vanishMax - vanishThreshold), 1);
-      offset = OFFSET_MAX + extraProgress * (window.innerWidth - OFFSET_MAX);
-    }
-
-
-    const scaleTransform =  "";
-
-    if (direction === 'left' && el.getAttribute('id') !== 'flipped') {
-      el.style.transform = `translateX(${-offset}px)`;
-    } else if (direction === 'left' && el.getAttribute('id') === 'flipped') {
-      el.style.transform = `translateX(${-offset}px) scale(-1, 1)`;
-    }
-    else if (direction === 'right') {
-      el.style.transform = `translateX(${offset}px)`;
-    } else if (direction == 'bottom') {
-      el.style.transform = `translateY(${offset}px)`;
-    }
-  });
-};
+      const scrollY = window.scrollY;
+      document.querySelectorAll('.hero-element[data-direction]').forEach(el => {
+        const direction = el.getAttribute('data-direction');
+        let offset;
+  
+        if (scrollY < vanishThreshold) {
+          const progress = scrollY / vanishThreshold;
+          offset = progress * OFFSET_MAX;
+        } else {
+          const extraProgress = Math.min((scrollY - vanishThreshold) / (vanishMax - vanishThreshold), 1);
+          offset = OFFSET_MAX + extraProgress * (window.innerWidth - OFFSET_MAX);
+        }
+  
+        let transformString = "";
+  
+        if (direction === 'left') {
+          transformString = `translateX(${-offset}px)`;
+        } else if (direction === 'right') {
+          transformString = `translateX(${offset}px)`;
+        } else if (direction === 'bottom') {
+          transformString = `translateY(${offset}px)`;
+        }
+  
+        if (el.getAttribute('id') === 'flipped') {
+          transformString += " scale(-1, 1)";
+        }
+        
+        el.style.transform = transformString;
+      });
+    };
   
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.querySelectorAll('.hero-element[data-direction]').forEach(el => {
-        if (el.getAttribute('id') === 'flipped') {
-            el.style.transform = 'translateX(0) scale(-1, 1)';
-        } else {
-            el.style.transform = 'translateX(0)';
-        }
-        });
-      }, 100);
+      updateHeroElements();
     });
   
     window.addEventListener('scroll', () => {
