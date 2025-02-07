@@ -360,24 +360,35 @@
         <section class="mt-10 p-4 relative w-full flex justify-center items-center">
             <div class="relative w-full h-auto border-2 border-yellow-600 overflow-hidden">
                 <img src="assets/images/s-1.png" alt="Banner"
-                    class="w-full object-cover relative z-0 sm:hidden md:block lg:block">
-
+                     class="w-full object-cover relative z-0 sm:hidden md:block lg:block">
+              
                 <img src="assets/images/s-2.png" alt="Chef Juna"
-                    class="parallax absolute lg:bottom-[12px] lg:right-[39px] sm:bottom-[5px] sm:right-[20px] md:bottom-[5px] md:right-[25px] w-auto h-auto sm:h-[320px] lg:h-[625px] object-cover z-10 sm:block md:block lg:block"
-                >
-
+                     data-direction="right"
+                     class="parallax absolute lg:bottom-[12px] lg:right-[39px] sm:bottom-[5px] sm:right-[20px] md:bottom-[5px] md:right-[25px] w-auto h-auto sm:h-[320px] lg:h-[625px] object-cover z-10 sm:block md:block lg:block second-element"
+                     style="transform: translateX(100vw);"
+                />
+              
+                <!-- Quotes -->
                 <img src="assets/images/s-3.png" alt="Quotes"
-                    class="parallax absolute top-[50px] sm:top-[80px] md:top-[100px] right-[50px] sm:right-[150px] md:right-[300px] sm:w-[50px] md:w-1/4 h-auto object-cover z-10 sm:block md:block lg:block"
-                >
-
+                     data-direction="right"
+                     class="parallax absolute top-[50px] sm:top-[80px] md:top-[100px] right-[50px] sm:right-[150px] md:right-[300px] sm:w-[50px] md:w-1/4 h-auto object-cover z-10 sm:block md:block lg:block"
+                     style="transform: translateX(100vw);"
+                />
+              
+                <!-- Hashtag Keju -->
                 <img src="assets/images/s-4.png" alt="Hashtag Keju"
-                    class="parallax absolute top-[40px] sm:top-[50px] md:top-[63px] left-3 sm:left-4 md:left-5 w-[100px] sm:w-[120px] md:w-[150px] h-auto object-cover z-10 sm:block md:block lg:block"
-                >
-
+                     data-direction="left"
+                     class="parallax absolute top-[40px] sm:top-[50px] md:top-[63px] left-3 sm:left-4 md:left-5 w-[100px] sm:w-[120px] md:w-[150px] h-auto object-cover z-10 sm:block md:block lg:block"
+                     style="transform: translateX(-100vw);"
+                />
+              
+                <!-- Icon Good Quality -->
                 <img src="assets/images/s-5.png" alt="Icon Good Quality"
-                    class="parallax absolute top-[200px] sm:top-[250px] md:top-[290px] left-[50%] sm:left-[55%] md:left-[620px] transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 h-auto object-cover z-10 sm:block md:block lg:block"
-                >
-            </div>
+                     data-direction="right"
+                     class="parallax absolute top-[200px] sm:top-[250px] md:top-[290px] left-[50%] sm:left-[55%] md:left-[620px] transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 h-auto object-cover z-10 sm:block md:block lg:block"
+                     style="transform: translateX(100vw);"
+                />
+              </div>
 
             <div class="absolute left-[120px] bottom-[180px] grid grid-cols-3 gap-2 hidden lg:grid">
                 <!-- Baris pertama dengan 3 kolom -->
@@ -1122,4 +1133,63 @@
     });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const parallaxElements = Array.from(document.querySelectorAll('img.parallax[data-direction]')).map(el => ({
+        el: el,
+        container: el.closest('section') || el.parentElement,
+        currentDistance: null
+      }));
+  
+      function smoothStep(x) {
+        return x * x * (3 - 2 * x);
+      }
+  
+      function lerp(a, b, t) {
+        return a + (b - a) * t;
+      }
+  
+      function updateParallaxElements() {
+        const windowHeight = window.innerHeight;
+        parallaxElements.forEach(item => {
+          const { el, container } = item;
+          if (!container) return;
+  
+          const rect = container.getBoundingClientRect();
+          const totalDistance = windowHeight + rect.height;
+          let progress = (windowHeight - rect.top) / totalDistance;
+          progress = Math.min(Math.max(progress, 0), 1);
+  
+          let rawFactor = Math.abs(progress - 0.5);
+          let smoothFactor = smoothStep(rawFactor);
+          let targetDistance = smoothFactor * 50;
+  
+          if (item.currentDistance === null) {
+            item.currentDistance = targetDistance;
+          } else {
+            const interpolationAmount = 0.3;
+            item.currentDistance = lerp(item.currentDistance, targetDistance, interpolationAmount);
+          }
+  
+          const direction = el.getAttribute('data-direction');
+          let transform = "";
+          if (direction === "right") {
+            transform = `translateX(${item.currentDistance}vw)`;
+          } else if (direction === "left") {
+            transform = `translateX(-${item.currentDistance}vw)`;
+          }
+          el.style.transform = transform;
+        });
+      }
+  
+      function animate() {
+        updateParallaxElements();
+        requestAnimationFrame(animate);
+      }
+  
+      animate();
+  
+      window.addEventListener('resize', updateParallaxElements);
+    });
+</script>
 </html>
