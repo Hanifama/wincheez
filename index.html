@@ -86,48 +86,80 @@
         </header>
 
         <!-- Hero Section -->
-        <section class="relative w-full h-screen overflow-hidden">
+        <section class="relative w-full h-[80vh] md:h-screen overflow-hidden">
             <!-- Background -->
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/BG.png');">
-            </div>
+            <div class="absolute inset-0 bg-cover bg-center hero-element transition-transform duration-500"
+                style="background-image: url('assets/images/BG.png'); opacity:1;"></div>
 
             <!-- Grass -->
-            <img src="assets/images/GRASS.png" alt="Grass" class="absolute -bottom-10 w-full h-auto">
+            <img src="assets/images/GRASS.png" alt="Grass" data-direction="bottom"
+                class="absolute -bottom-5 md:-bottom-10 w-full h-auto hero-element transition-transform duration-500 scale-90 md:scale-100"
+                style="transform: translateY(100vw); opacity:1;">
 
             <!-- Cows -->
-            <img src="assets/images/COW_1.png" alt="Cow 1" class="absolute -bottom-5 -left-28 w-[500px] -scale-x-100">>
-            <img src="assets/images/COW_2.png" alt="Cow 2"
-                class="absolute bottom-[100px] left-[380px] transform -translate-x-1/2 w-20">
-            <img src="assets/images/COW_3.png" alt="Cow 3" class="absolute bottom-[150px] left-[450px] w-12">
-            <img src="assets/images/COW_3.png" alt="Cow 3"
-                class="absolute bottom-[200px] left-[550px] w-4 -scale-x-100">
+            <img src="assets/images/COW_1.png" alt="Cow Main" data-direction="left" id="flipped"
+                class="absolute -bottom-5 -left-20 md:-left-28 w-[300px] md:w-[500px] hero-element transition-transform duration-500 transform scale-x-100"
+                style="transform: translateY(100vw);opacity:1;">
+
 
             <!-- Product -->
-            <img src="assets/images/cheddar-premium.png" alt="Product"
-                class="absolute w-[410px] h-[310px] bottom-[170px] -right-24 transform -translate-x-1/2">
+            <img src="assets/images/cheddar-premium.png" alt="Product" data-direction="right"
+                class="absolute w-[250px] h-auto md:w-[410px] md:h-[310px] bottom-[250px] md:bottom-[170px] right-8 md:right-32 hero-element transition-transform duration-500"
+                style="transform: translateX(100vw);">
 
             <!-- Light Ring -->
-            <img src="assets/images/LIGHT_2.png" alt="Light Ring"
-                class="absolute bottom-[90px] -right-32 transform -translate-x-1/2 w-[400px] h-[400px] mix-blend-screen">
+            <img src="assets/images/LIGHT_2.png" alt="Light Ring" data-direction="right"
+                class="absolute bottom-[190px] md:bottom-[90px] right-[-5px] md:right-[72px] w-[250px] h-[250px] md:w-[400px] md:h-[400px] mix-blend-screen hero-element transition-transform duration-500"
+                style="transform: translateX(100vw);">
 
             <!-- Light Effects -->
-            <img src="assets/images/LIGHT_1.png" alt="Light 1"
-                class="absolute top-[100px] right-[240px] w-48 mix-blend-screen">
-            <img src="assets/images/LIGHT_3.png" alt="Light 3"
-                class="absolute top-[230px] right-[400px] w-64 mix-blend-screen">
+            <img src="assets/images/LIGHT_1.png" alt="Light 1" data-direction="right"
+                class="absolute bottom-[390px] md:bottom-[405px] right-[110px] md:right-[240px] w-24 md:w-48 mix-blend-screen hero-element transition-transform duration-500 scale-100"
+                style="transform: translateX(100vw);">
+
+            <img src="assets/images/LIGHT_3.png" alt="Light 3" data-direction="right"
+                class="absolute bottom-[250px] md:bottom-[100px] right-[220px] md:right-[400px] w-32 md:w-64 mix-blend-screen hero-element transition-transform duration-500"
+                style="transform: translateX(100vw);">
 
             <!-- Vitamins -->
-            <img src="assets/images/VIT_A.png" alt="Vitamin A" class="absolute bottom-[400px] right-32 w-16">
-            <img src="assets/images/VIT_D.png" alt="Vitamin D"
-                class="absolute bottom-[340px] right-14 transform -translate-x-1/2 w-16">
-            <img src="assets/images/VIT_E.png" alt="Vitamin E" class="absolute bottom-[260px] right-24 w-16">
+            <img src="assets/images/VIT_A.png" alt="Vitamin A" data-direction="right"
+                class="absolute bottom-[375px] md:bottom-[400px] right-[25px] md:right-32 w-12 md:w-16 hero-element transition-transform duration-500"
+                style="transform: translateX(100vw);">
+
+            <img src="assets/images/VIT_D.png" alt="Vitamin D" data-direction="right"
+                class="absolute bottom-[320px] md:bottom-[340px] right-[2px] md:right-[90px] w-12 md:w-16 hero-element transition-transform duration-500"
+                style="transform: translateX(100vw);">
+
+            <img src="assets/images/VIT_E.png" alt="Vitamin E" data-direction="right"
+                class="absolute bottom-[270px] md:bottom-[260px] right-[10px] md:right-24 w-12 md:w-16 hero-element transition-transform duration-500"
+                style="transform: translateX(100vw);">
+
+            <!-- Cows -->
+            <img src="assets/images/COW_2.png" alt="Cow 2" data-direction="bottom"
+                class="absolute bottom-[30px] left-[250px] md:bottom-[100px] md:left-[370px] -translate-x-1/2 w-12 md:w-28 hero-element transition-transform duration-500"
+                style="transform: translateY(100vw); opacity:1;">
+
+            <img src="assets/images/COW_3.png" alt="Cow 3" data-direction="bottom"
+                class="absolute bottom-[50px] left-[320px] md:bottom-[170px] md:left-[520px] w-8 md:w-10 hero-element transition-transform duration-500"
+                style="transform: translateY(100vw); opacity:1;">
+
+            <img src="assets/images/COW_3.png" alt="Cow 4" data-direction="bottom"
+                class="absolute bottom-[60px] left-[380px] md:bottom-[210px] md:left-[620px] w-4 md:w-4 hero-element transition-transform duration-500"
+                style="transform: translateY(100vw); opacity:1;">
 
             <!-- Text -->
-            <div class="absolute top-28 left-9 text-right flex flex-col items-center">
-                <h1 class="text-white text-6xl md:text-4xl font-pacifico drop-shadow-lg -rotate-6"
-                    style="font-family: 'Dancing Script', cursive">Kebaikan Susu Sapi Asli</h1><br />
-                <h1 class="text-white text-6xl md:text-6xl font-bold font-pacifico drop-shadow-lg -rotate-6"
-                    style="font-family: 'Libre Baskerville', serif">New Zealand</h1>
+            <div data-direction="bottom"
+                class="absolute top-32 md:top-28 left-4 md:left-9 text-center md:text-right flex flex-col items-center hero-element transition-transform duration-500"
+                style="transform: translateX(-50px); opacity:1;">
+                <h1 class="text-white text-4xl md:text-4xl font-pacifico drop-shadow-lg -rotate-6"
+                    style="font-family: 'Dancing Script', cursive">
+                    Kebaikan Susu Sapi Asli
+                </h1>
+                <br class="hidden md:block" />
+                <h1 class="text-white text-4xl md:text-6xl font-bold font-pacifico drop-shadow-lg -rotate-6"
+                    style="font-family: 'Libre Baskerville', serif">
+                    New Zealand
+                </h1>
             </div>
         </section>
 
@@ -325,15 +357,69 @@
             </div>
         </section>
 
-        <section class="mt-10 p-4 relative">
-            <!-- Embed YouTube Trigger -->
-            <div class="md:w-[505px] md:h-[280px] md:left-[85px] md:top-[190px] w-1/2 absolute inset-0 flex items-center justify-center cursor-pointer"
-                id="videoTrigger">
-                <span class="w-full h-full rounded-2xl cursor-pointer bg-white bg-opacity-5"></span>
+        <section class="mt-10 p-4 relative w-full flex justify-center items-center">
+            <div class="relative w-full h-auto border-2 border-yellow-600 overflow-hidden">
+                <img src="assets/images/s-1.png" alt="Banner"
+                    class="w-full object-cover relative z-0 sm:hidden md:block lg:block">
+
+                <img src="assets/images/s-2.png" alt="Chef Juna"
+                    class="parallax absolute lg:bottom-[12px] lg:right-[39px] sm:bottom-[5px] sm:right-[20px] md:bottom-[5px] md:right-[25px] w-auto h-auto sm:h-[320px] lg:h-[625px] object-cover z-10 sm:block md:block lg:block"
+                    data-speed="0.3" data-direction="horizontal">
+
+                <img src="assets/images/s-3.png" alt="Quotes"
+                    class="parallax absolute top-[50px] sm:top-[80px] md:top-[100px] right-[50px] sm:right-[150px] md:right-[300px] sm:w-[50px] md:w-1/4 h-auto object-cover z-10 sm:block md:block lg:block"
+                    data-speed="0.2" data-direction="vertical">
+
+                <img src="assets/images/s-4.png" alt="Hashtag Keju"
+                    class="parallax absolute top-[40px] sm:top-[50px] md:top-[63px] left-3 sm:left-4 md:left-5 w-[100px] sm:w-[120px] md:w-[150px] h-auto object-cover z-10 sm:block md:block lg:block"
+                    data-speed="0.4" data-direction="horizontal">
+
+                <img src="assets/images/s-5.png" alt="Icon Good Quality"
+                    class="parallax absolute top-[200px] sm:top-[250px] md:top-[290px] left-[50%] sm:left-[55%] md:left-[620px] transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 h-auto object-cover z-10 sm:block md:block lg:block"
+                    data-speed="0.5" data-direction="vertical">
             </div>
 
-            <!-- Gambar -->
-            <img src="assets/images/banner.png" alt="Banner" class="w-full h-auto object-cover">
+            <div class="absolute left-[120px] bottom-[180px] grid grid-cols-3 gap-2 hidden lg:grid">
+                <!-- Baris pertama dengan 3 kolom -->
+                <div class="flex col-span-3 space-x-4 items-center">
+                    <!-- TikTok Link dan Icon -->
+                    <a href="https://www.tiktok.com" target="_blank" class="flex items-center space-x-2">
+                        <img src="path-to-your-tiktok-icon.png" alt="TikTok" class="w-6 h-6">
+                        <span>WINCheez.id</span>
+                    </a>
+
+                    <!-- Instagram Link dan Icon -->
+                    <a href="https://www.instagram.com" target="_blank" class="flex items-center space-x-2">
+                        <img src="path-to-your-instagram-icon.png" alt="Instagram" class="w-6 h-6">
+                        <span>WINCHeez_id</span>
+                    </a>
+
+                    <!-- Facebook Link dan Icon -->
+                    <a href="https://www.facebook.com" target="_blank" class="flex items-center space-x-2">
+                        <img src="path-to-your-facebook-icon.png" alt="Facebook" class="w-6 h-6">
+                        <span>WINCheez.id</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gambar Banner (Hanya untuk tampilan mobile) -->
+            <img src="assets/images/banner.png" alt="Banner"
+                class="w-full h-auto object-cover relative z-0 sm:block md:block lg:hidden">
+
+
+            <div class="md:w-[505px] md:h-[280px] md:left-[85px] md:top-[190px] w-1/2 absolute inset-0 flex items-center justify-center cursor-pointer z-10"
+                id="videoTrigger">
+                <!-- Iframe hanya tampil di perangkat desktop -->
+                <iframe class="w-full h-full rounded-2xl z-0 hidden lg:block"
+                    src="https://www.youtube.com/embed/61EE8UCJQXY" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+                <!-- Span tampil di perangkat selain desktop -->
+                <span
+                    class="w-full h-full absolute lg:w-full lg:h-full sm:w-1/2 sm:h-1/2 lg:left-0 lg:bottom-0 sm:left-[20px] sm:bottom-[180px] rounded-2xl cursor-pointer bg-white bg-opacity-5 z-10"></span>
+            </div>
 
             <!-- Modal Popup -->
             <div id="videoModal"
@@ -991,6 +1077,53 @@
     closeModal.addEventListener('click', function () {
         videoModal.classList.add('hidden');
         modalIframe.src = ""; // Stop video when closing modal
+    });
+</script>
+
+<!-- Parallax -->
+<script>
+    const OFFSET_MAX = 20;
+    const vanishThreshold = 50;
+    const vanishMax = 1000;
+
+    const updateHeroElements = () => {
+        const scrollY = window.scrollY;
+        document.querySelectorAll('.hero-element[data-direction]').forEach(el => {
+            const direction = el.getAttribute('data-direction');
+            let offset;
+
+            if (scrollY < vanishThreshold) {
+                const progress = scrollY / vanishThreshold;
+                offset = progress * OFFSET_MAX;
+            } else {
+                const extraProgress = Math.min((scrollY - vanishThreshold) / (vanishMax - vanishThreshold), 1);
+                offset = OFFSET_MAX + extraProgress * (window.innerWidth - OFFSET_MAX);
+            }
+
+            let transformString = "";
+
+            if (direction === 'left') {
+                transformString = `translateX(${-offset}px)`;
+            } else if (direction === 'right') {
+                transformString = `translateX(${offset}px)`;
+            } else if (direction === 'bottom') {
+                transformString = `translateY(${offset}px)`;
+            }
+
+            if (el.getAttribute('id') === 'flipped') {
+                transformString += " scale(-1, 1)";
+            }
+
+            el.style.transform = transformString;
+        });
+    };
+
+    window.addEventListener('load', () => {
+        updateHeroElements();
+    });
+
+    window.addEventListener('scroll', () => {
+        window.requestAnimationFrame(updateHeroElements);
     });
 </script>
 
