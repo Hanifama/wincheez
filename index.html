@@ -430,7 +430,7 @@
                 id="videoTrigger">
                 <!-- Iframe hanya tampil di perangkat desktop -->
                 <iframe class="w-full h-full rounded-2xl z-0 hidden lg:block"
-                    src="https://www.youtube.com/embed/61EE8UCJQXY" title="YouTube video player" frameborder="0"
+                    src="https://www.youtube.com/embed/bdy77LCzC5E" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
@@ -1099,12 +1099,12 @@
 
     videoTrigger.addEventListener('click', function () {
         videoModal.classList.remove('hidden');
-        modalIframe.src = "https://www.youtube.com/embed/61EE8UCJQXY?autoplay=1";
+        modalIframe.src = "https://www.youtube.com/embed/bdy77LCzC5E?autoplay=1";
     });
 
     closeModal.addEventListener('click', function () {
         videoModal.classList.add('hidden');
-        modalIframe.src = ""; // Stop video when closing modal
+        modalIframe.src = "";
     });
 </script>
 
